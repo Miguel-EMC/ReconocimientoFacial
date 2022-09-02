@@ -62,3 +62,33 @@ batch_size=32
 train_data_dir='./train/'
 validation_data_dir='./test/'
 ```
+
+- Se utiliza la librería de keras, la cual cuenta con la clase ImageDataGenerator, la cual va ayudar a generar bloques o batch, esto se realiza porque cuando se requiere entrenar modelos con resoluciones mayores, por lo que se requiere mucha memoria, por lo tanto se necesita dividir el proceso de entrenamiento en bloques de menor tamaño de imágenes, por eso se utiliza la librería keras, en la que se realiza la técnica llamada data augmentation.
+
+```py
+train_datagen = ImageDataGenerator(
+					rescale=1./255,
+					rotation_range=30,
+					shear_range=0.3,
+					zoom_range=0.3,
+					horizontal_flip=True,
+					fill_mode='nearest')
+
+validation_datagen = ImageDataGenerator(rescale=1./255)
+
+train_generator = train_datagen.flow_from_directory(
+					train_data_dir,
+					color_mode='grayscale',
+					target_size=(IMG_HEIGHT, IMG_WIDTH),
+					batch_size=batch_size,
+					class_mode='categorical',
+					shuffle=True)
+
+validation_generator = validation_datagen.flow_from_directory(
+							validation_data_dir,
+							color_mode='grayscale',
+							target_size=(IMG_HEIGHT, IMG_WIDTH),
+							batch_size=batch_size,
+							class_mode='categorical',
+							shuffle=True)
+```
