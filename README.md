@@ -107,3 +107,4 @@ plt.imshow(image[:,:,0], cmap='gray')
 plt.title(labl)
 plt.show()
 ```
+![image](https://github.com/Miguel-EMC/ReconocimientoFacial/blob/master/Images/output.png)
