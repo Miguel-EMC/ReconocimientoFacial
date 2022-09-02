@@ -10,7 +10,7 @@ _Todos los colaboradores del proyecto desde sus inicios son:_
 --- 
 ## Video de Youtube 📌
 
-En el siguiente enlace se podra visualizar todos los procedimiento que se realizo [Video]([https://www.youtube.com/watch?v=yWNPFupdo_Q](https://youtu.be/avcwnAtKPWU])
+En el siguiente enlace se podra visualizar todos los procedimiento que se realizo [Video](https://www.youtube.com/watch?v=yWNPFupdo_Q](https://youtu.be/avcwnAtKPWU)
 
 ### Descripción 📄
 El equipo de trabajo para el proyecto denominado, es la creacion de un programa para la deteccion de emociones faciales.
@@ -19,11 +19,11 @@ El equipo de trabajo para el proyecto denominado, es la creacion de un programa 
 
 ---
 ## Content 🚀
-- [Pre-requisitos](#HERRAMIENTAS UTILIZADAS)
+- [Pre-requisitos](#HERRAMIENTAS)
 	- [KERAS](#KERAS)
 	- [MATPLOTLIB](#MATPLOTLIB)
 	- [SKLEARN](#SKLEARN)
-	- [VISUAL STUDIO](#VISUAL STUDIO)
+	- [VISUAL STUDIO](#VISUAL)
 - [Twitter to CouchDB](#Twitter-to-CouchDB)
 - [Webscraping to Neo4j](#Webscraping-to-Neo4j)
 - [Facebook to CouchDB](#cFacebook-to-CouchDB)
