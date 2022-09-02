@@ -24,15 +24,7 @@ El equipo de trabajo para el proyecto denominado, es la creacion de un programa 
 	- [MATPLOTLIB](#MATPLOTLIB)
 	- [SKLEARN](#SKLEARN)
 	- [VISUAL-STUDIO](#VISUAL-STUDIO)
-- [Twitter to CouchDB](#Twitter-to-CouchDB)
-- [Webscraping to Neo4j](#Webscraping-to-Neo4j)
-- [Facebook to CouchDB](#cFacebook-to-CouchDB)
-- [Twitter to MongoDB](#Twitter-to-MongoDB)
-- [Kaggle to MySQL](#Kaggle-to-MySQL)
-- [INEC to SQL Server](#INEC-to-SQL-Server)
-- [WebScraping to PostgreSQL](#WebScraping-to-PostgreSQL)
-- [Datos abiertos to MySQL](#Datos-abiertos-to-MySQL)
-
+- [DESARROLLO DEL PROYECTO](#DESARROLLO-DEL-PROYECTO)
 
 ## HERRAMIENTAS-UTILIZADAS 📋
 _Para poder desarrollar el proyecto es necesario instalar liberias de python_
@@ -45,3 +37,16 @@ Es una librería de Python especializada en la creación de gráficos en dos dim
 Es una de estas librerías gratuitas para Python. Cuenta con algoritmos de clasificación, regresión, clustering y reducción de dimensionalidad. Además, presenta la compatibilidad con otras librerías de Python como NumPy, SciPy y matplotlib, es la librería más útil para Machine Learning en Python, es de código abierto y es reutilizable en varios contextos, fomentando el uso académico y comercial. Proporciona una gama de algoritmos de aprendizaje supervisados y no supervisados en Python.
 ### VISUAL-STUDIO
 Visual Studio Code (VS Code) es un editor de código fuente desarrollado por Microsoft. Es software libre y multiplataforma, está disponible para Windows, GNU/Linux y macOS. VS Code tiene una buena integración con Git, cuenta con soporte para depuración de código, y dispone de un sinnúmero de extensiones, que básicamente te da la posibilidad de escribir y ejecutar código en cualquier lenguaje de programación.
+
+## DESARROLLO-DEL-PROYECTO
+Se instaló previamente las librerías de keras, matpltlib, numpy, tensorflow, ya que se utilizara para poder realizar el proyecto, luego se llamó a las librerías dentro del código del proyecto.
+
+```py
+from keras.preprocessing.image import ImageDataGenerator
+from keras.models import Sequential
+from keras.layers import Dense,Dropout,Flatten
+from keras.layers import Conv2D,MaxPooling2D
+import os
+from matplotlib import pyplot as plt
+import numpy as np
+```
