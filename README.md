@@ -39,7 +39,7 @@ Es una de estas librerías gratuitas para Python. Cuenta con algoritmos de clasi
 Visual Studio Code (VS Code) es un editor de código fuente desarrollado por Microsoft. Es software libre y multiplataforma, está disponible para Windows, GNU/Linux y macOS. VS Code tiene una buena integración con Git, cuenta con soporte para depuración de código, y dispone de un sinnúmero de extensiones, que básicamente te da la posibilidad de escribir y ejecutar código en cualquier lenguaje de programación.
 
 ## DESARROLLO-DEL-PROYECTO
-- Se instaló previamente las librerías de keras, matpltlib, numpy, tensorflow, ya que se utilizara para poder realizar el proyecto, luego se llamó a las librerías dentro del código del proyecto.
+Se instaló previamente las librerías de keras, matpltlib, numpy, tensorflow, ya que se utilizara para poder realizar el proyecto, luego se llamó a las librerías dentro del código del proyecto.
 
 ```py
 from keras.preprocessing.image import ImageDataGenerator
@@ -50,7 +50,7 @@ import os
 from matplotlib import pyplot as plt
 import numpy as np
 ```
-- Después se crea un tamaño para las imagenes que se van a mostrar dentro del programa, y para poder leer la dataset se crean las variables.
+Después se crea un tamaño para las imagenes que se van a mostrar dentro del programa, y para poder leer la dataset se crean las variables.
 
 ```py
 #image size
@@ -63,7 +63,7 @@ train_data_dir='./train/'
 validation_data_dir='./test/'
 ```
 
-- Se utiliza la librería de keras, la cual cuenta con la clase ImageDataGenerator, la cual va ayudar a generar bloques o batch, esto se realiza porque cuando se requiere entrenar modelos con resoluciones mayores, por lo que se requiere mucha memoria, por lo tanto se necesita dividir el proceso de entrenamiento en bloques de menor tamaño de imágenes, por eso se utiliza la librería keras, en la que se realiza la técnica llamada data augmentation.
+Se utiliza la librería de keras, la cual cuenta con la clase ImageDataGenerator, la cual va ayudar a generar bloques o batch, esto se realiza porque cuando se requiere entrenar modelos con resoluciones mayores, por lo que se requiere mucha memoria, por lo tanto se necesita dividir el proceso de entrenamiento en bloques de menor tamaño de imágenes, por eso se utiliza la librería keras, en la que se realiza la técnica llamada data augmentation.
 
 ```py
 train_datagen = ImageDataGenerator(
@@ -91,4 +91,19 @@ validation_generator = validation_datagen.flow_from_directory(
 							batch_size=batch_size,
 							class_mode='categorical',
 							shuffle=True)
+```
+Se verifica el generador trazando las emociones faciales de las imágenes generadas aleatoriamente, para ello se crea un arreglo denominado class_labels, en la que se debe incluir, las 7 emociones, por ejemplo: feliz, triste, nervioso, enojado, neutral, sorprendido y finalmente se imprime una función random las imágenes.
+```py
+class_labels=['Angry','Disgust', 'Fear', 'Happy','Neutral','Sad','Surprise']
+
+img, label = train_generator.__next__()
+
+import random
+
+i=random.randint(0, (img.shape[0])-1)
+image = img[i]
+labl = class_labels[label[i].argmax()]
+plt.imshow(image[:,:,0], cmap='gray')
+plt.title(labl)
+plt.show()
 ```
