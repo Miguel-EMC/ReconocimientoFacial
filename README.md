@@ -39,7 +39,7 @@ Es una de estas librerías gratuitas para Python. Cuenta con algoritmos de clasi
 Visual Studio Code (VS Code) es un editor de código fuente desarrollado por Microsoft. Es software libre y multiplataforma, está disponible para Windows, GNU/Linux y macOS. VS Code tiene una buena integración con Git, cuenta con soporte para depuración de código, y dispone de un sinnúmero de extensiones, que básicamente te da la posibilidad de escribir y ejecutar código en cualquier lenguaje de programación.
 
 ## DESARROLLO-DEL-PROYECTO
-Se instaló previamente las librerías de keras, matpltlib, numpy, tensorflow, ya que se utilizara para poder realizar el proyecto, luego se llamó a las librerías dentro del código del proyecto.
+- Se instaló previamente las librerías de keras, matpltlib, numpy, tensorflow, ya que se utilizara para poder realizar el proyecto, luego se llamó a las librerías dentro del código del proyecto.
 
 ```py
 from keras.preprocessing.image import ImageDataGenerator
@@ -49,4 +49,16 @@ from keras.layers import Conv2D,MaxPooling2D
 import os
 from matplotlib import pyplot as plt
 import numpy as np
+```
+- Después se crea un tamaño para las imagenes que se van a mostrar dentro del programa, y para poder leer la dataset se crean las variables.
+
+```py
+#image size
+IMG_HEIGHT=48 
+IMG_WIDTH = 48
+batch_size=32
+```
+```py
+train_data_dir='./train/'
+validation_data_dir='./test/'
 ```
