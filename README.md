@@ -119,3 +119,4 @@ print(cm)
 import seaborn as sns
 sns.heatmap(cm, annot=True)
 ```
+![image](https://github.com/Miguel-EMC/ReconocimientoFacial/blob/master/Images/Screenshot%202022-09-02%20165437.png)
