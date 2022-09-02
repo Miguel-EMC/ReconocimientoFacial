@@ -108,3 +108,14 @@ plt.title(labl)
 plt.show()
 ```
 ![image](https://github.com/Miguel-EMC/ReconocimientoFacial/blob/master/Images/output.png)
+
+Finalmente se construye, para la matriz confusión con ayuda de la librería tensorflow con el metodo sklearn.metrics.
+```py
+#Confusion Matrix - verify accuracy of each class
+from sklearn.metrics import confusion_matrix
+
+cm = confusion_matrix(test_labels, predictions)
+print(cm)
+import seaborn as sns
+sns.heatmap(cm, annot=True)
+```
