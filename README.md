@@ -155,3 +155,4 @@ cap.release()
 cv2.destroyAllWindows()
 ```
 Se reproduce el video y se comienza el programa a detectar las emociones faciales. 
+![image](https://github.com/Miguel-EMC/ReconocimientoFacial/blob/master/Images/Screenshot%202022-09-02%20165846.png)
